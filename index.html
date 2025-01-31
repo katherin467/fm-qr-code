@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,20 @@
     body {
       font-family: 'Outfit', sans-serif; 
       background-color: var(--slate-300);
-      margin: 0 auto;
+      margin: 0 auto; /* gets rid of any surround margin */
+
+      /* grid solution to center everything onscreen
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      */
+    }
+    main { /* works if card is the only thing there */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+      min-height: 100vh;
     }
     #card {
       margin: auto;
@@ -74,12 +87,13 @@
     </div>
   </div>
   
+  <!--
   <div class="attribution">
     <p>
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/katherin467" target="_blank">Katherine Lim</a>.
     </p>
-  </div>
+  </div>-->
 </main>
 </body>
 </html>
